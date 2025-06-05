@@ -1,0 +1,229 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.fContainer {
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+    width: 100%;
+    height: 60px;
+    background: #0f172a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand-icon {
+    margin-right: 10px;
+    font-size: 22px;
+    color: #3b82f6;
+}
+
+.firstname {
+    color: #3b82f6;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+.lastname {
+    color: #e2e8f0;
+    font-weight: 300;
+    padding-left: 4px;
+    font-size: 22px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.navigation > li {
+    list-style: none;
+}
+
+.navigation > li > a {
+    color: #e2e8f0;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.navigation > li > a i {
+    margin-right: 8px;
+}
+
+.navigation > li > a:hover {
+    background-color: rgba(59, 130, 246, 0.15);
+    color: #3b82f6;
+}
+
+.active {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3b82f6 !important;
+}
+
+.Judul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #1e3a8a, #2563eb);
+    width: 100%;
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kotak {
+flex: 1; 
+background-color: #f8fafc;
+width: 100%;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 16px;
+padding: 16px;
+height: calc(100vh - 110px); 
+overflow: hidden;
+}
+
+.boxs1, .boxs2, .boxs3 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+}
+
+.box1, .box2 {
+flex: 1;
+border-radius: 12px;
+padding: 16px;
+position: relative;
+overflow: hidden;
+box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+display: flex;
+flex-direction: column;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box1 {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.box2 {
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+}
+
+.box1:hover, .box2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.box1::after, .box2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.15), transparent 70%);
+    pointer-events: none;
+}
+
+.icon-container {
+position: absolute;
+top: 12px;
+right: 12px;
+width: 32px;
+height: 32px;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.2);
+display: flex;
+justify-content: center;
+align-items: center;
+backdrop-filter: blur(5px);
+}
+
+.Monitoring1 {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nilai1 {
+    color: white;
+    font-weight: 600;
+    font-size: 32px;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+.unit {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-left: 4px;
+}
+
+@media (max-width: 768px) {
+.kotak {
+grid-template-columns: 1fr;
+gap: 10px;
+padding: 10px;
+height: calc(100vh - 110px);
+overflow-y: auto; 
+}
+
+.boxs1, .boxs2, .boxs3 {
+gap: 10px;
+}
+
+.box1, .box2 {
+min-height: 120px;
+}
+
+.navigation > li > a {
+padding: 6px 10px;
+font-size: 13px;
+}
+
+.navigation > li > a i {
+margin-right: 5px;
+}
+}
